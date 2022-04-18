@@ -25,11 +25,12 @@ export default {
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <h3>All dishes</h3>
+    <h3>All dishes: </h3>
     <div v-for="dish in dishes" v-bind:key="dish.id">
       <p>{{ dish.name }}</p>
       <!-- <button v-on:click="`/dishes/${dish.id}`">More info</button> -->
       <router-link v-bind:to="`/dishes/${dish.id}`">More info</router-link>
+      <hr />
     </div>
   </div>
 </template>

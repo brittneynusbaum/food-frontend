@@ -3,7 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>|
     <router-link to="/dishes">All Dishes</router-link>|
-    <router-link to="/dishes/new">New</router-link>
+    <router-link to="/dishes/new">New Dish</router-link>
   </nav>
   <router-view />
 </template>
@@ -28,5 +28,9 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+img {
+  width: 200px;
 }
 </style>

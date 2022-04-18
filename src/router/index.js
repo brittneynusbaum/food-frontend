@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import DishesNew from '../views/DishesNew.vue'
 import DishesIndex from '../views/DishesIndex.vue'
 import DishesShow from '../views/DishesShow.vue'
+import DishesEdit from '../views/DishesEdit.vue'
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     path: '/dishes/:id',
     name: 'dishes-show',
     component: DishesShow
+  },
+  {
+    path: '/dishes/:id/edit',
+    name: 'dishes-edit',
+    component: DishesEdit
   }
 
 ]
