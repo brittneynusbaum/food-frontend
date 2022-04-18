@@ -17,6 +17,14 @@ export default {
         console.log(response.data)
         this.currentDish = response.data
       })
+    },
+    destroyDish: function () {
+      console.log('delete product')
+      axios.delete(`/dishes/${this.$route.params.id}.json`).then(response => {
+        console.log(response.data)
+        this.currentDish.destroy
+        this.$router.push('/dishes')
+      })
     }
   },
 };
@@ -33,6 +41,8 @@ export default {
     <p>
       <router-link v-bind:to="`/dishes/${this.$route.params.id}/edit`">Update dish</router-link>
     </p>
+    <hr />
+    <p><button v-on:click="destroyDish()">Delete Dish</button></p>
   </div>
 </template>
 

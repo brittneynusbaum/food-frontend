@@ -14,6 +14,7 @@ export default {
       axios.post(`/dishes`, this.newDishParams).then(response => {
         console.log(response.data)
         this.newDishParams = {}
+        this.$router.push('/dishes')
       })
     }
   },

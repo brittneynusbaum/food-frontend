@@ -28,8 +28,11 @@ export default {
     <h3>All dishes: </h3>
     <div v-for="dish in dishes" v-bind:key="dish.id">
       <p>{{ dish.name }}</p>
+      <img v-bind:src="dish.image">
       <!-- <button v-on:click="`/dishes/${dish.id}`">More info</button> -->
-      <router-link v-bind:to="`/dishes/${dish.id}`">More info</router-link>
+      <p>
+        <router-link v-bind:to="`/dishes/${dish.id}`">More info</router-link>
+      </p>
       <hr />
     </div>
   </div>
