@@ -13,7 +13,7 @@ export default {
   methods: {
     indexDish: function () {
       console.log('showing dish')
-      axios.get(`/dishes/2`, this.currentDish).then(response => {
+      axios.get(`/dishes/${this.$route.params.id}.json`).then(response => {
         console.log(response.data)
         this.currentDish = response.data
       })
@@ -25,11 +25,11 @@ export default {
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <p><b>Name: </b> {{ this.currentDish.name }}</p>
-    <p><b>Description:</b> {{ this.currentDish.description }}</p>
-    <p><b>Buy again?:</b> {{ this.currentDish.buy_again }}</p>
-    <p><b>Restaurant:</b> {{ this.currentDish.restaurant }}</p>
-    <img v-bind:src="this.currentDish.image">
+    <p><b>Name: </b> {{ currentDish.name }}</p>
+    <p><b>Description:</b> {{ currentDish.description }}</p>
+    <p><b>Buy again?:</b> {{ currentDish.buy_again }}</p>
+    <p><b>Restaurant:</b> {{ currentDish.restaurant }}</p>
+    <img v-bind:src="currentDish.image">
   </div>
 </template>
 
