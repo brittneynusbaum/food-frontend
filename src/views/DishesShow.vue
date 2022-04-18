@@ -30,6 +30,9 @@ export default {
     <p><b>Buy again?:</b> {{ currentDish.buy_again }}</p>
     <p><b>Restaurant:</b> {{ currentDish.restaurant }}</p>
     <img v-bind:src="currentDish.image">
+    <p>
+      <router-link v-bind:to="`/dishes/${this.$route.params.id}/edit`">Update dish</router-link>
+    </p>
   </div>
 </template>
 
