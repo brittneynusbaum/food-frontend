@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>|
-    <router-link to="/dishes/new">New Dish</router-link>
+    <router-link to="/dishes">All Dishes</router-link>|
+    <router-link to="/dishes/new">New</router-link>
   </nav>
   <router-view />
 </template>
