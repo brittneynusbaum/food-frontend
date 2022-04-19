@@ -39,7 +39,9 @@ export default {
     <p><b>Restaurant:</b> {{ currentDish.restaurant }}</p>
     <img v-bind:src="currentDish.image">
     <p>
-      <router-link v-bind:to="`/dishes/${this.$route.params.id}/edit`">Update dish</router-link>
+      <button>
+        <router-link v-bind:to="`/dishes/${this.$route.params.id}/edit`">Update dish</router-link>
+      </button>
     </p>
     <hr />
     <p><button v-on:click="destroyDish()">Delete Dish</button></p>

@@ -31,7 +31,9 @@ export default {
       <img v-bind:src="dish.image">
       <!-- <button v-on:click="`/dishes/${dish.id}`">More info</button> -->
       <p>
-        <router-link v-bind:to="`/dishes/${dish.id}`">More info</router-link>
+        <button>
+          <router-link v-bind:to="`/dishes/${dish.id}`">More info</router-link>
+        </button>
       </p>
       <hr />
     </div>
